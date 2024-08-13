@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(280deg, #b249b6, #21de67);
+    max-height: 15000px;
+    position: relative; /* Membuat posisi relatif untuk elemen ::before */
+}
+header {
+    color: #fff;
+    padding: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center; 
+}
+
+header .container {
+    text-align: center;
+    position: fixed;
+    width: 35%;
+    border-radius: 30px;
+    background: linear-gradient(280deg, #b249b6, #21de67);; 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+    padding: 15px;     
+}
+
+header .container a:hover {
+    color: #fff;
+}
+
+header .container a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0 25px 0;
+}
+header .container a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #fff;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+header .container a:hover::after {
+    transform: scaleX(0.5)
+}
+
+#hero  {
+    padding: 2rem 0;
+    display: flex;
+    width: 100%;
+    height: 700px;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    overflow: hidden; 
+}
+
+#hero .layer {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-content {
+    color: #E6E6C0;
+    width: 90%;
+    position: relative; 
+    display: flex; 
+    align-items: start; 
+    justify-content: center; 
+    z-index: 2; 
+}
+
+.hero-content img {
+    position: absolute; 
+    top: 25%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    width: auto; 
+    height: 270px; 
+    object-fit: contain ; 
+    z-index: 1;   
+}
+
+.heroo {
+    position: relative; 
+    top : -50px;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 4px rgb(230, 37, 140, 0.7);
+    z-index: 2;
+}
+
+.hero-content p {
+    color: rgb(230, 37, 140);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    z-index: 2;
+}
+
+.button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    color:#e6258c;
+    cursor: pointer;
+    text-decoration: none; 
+    z-index: 2;
+}
+
+.about-me-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(280deg, #b249b6, #21de67); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    padding: 20px; 
+    transform: translate(40%, 10%);
+    margin-bottom: 100px;
+}
+
+.card-image1 img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px; 
+    z-index: 5; 
+}
+
+.card-content1 {
+    color: white;
+    z-index: 5; 
+}
+
+.card-content1 p {
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#project-section .container, #certificate .container, #contact .container, #about .container  {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 5px 3px 5px;
+}
+
+#project-section .container h2, #certificate .container h2,  #contact .container h2, #about .container h2, .footer-content h3  {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+    margin: 5px 10px 5px;
+    opacity: 0.7;
+}
+
+#project-section .container p, #certificate .container p,  #contact .container p, #about .container p {
+    color:#e6258c;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+#project-section .container {
+    text-align: center;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    color: white;
+    z-index: 1000;
+    margin-top: 0px;
+}
+
+#project {
+    display: grid;
+    grid-template-columns:  1fr;
+    gap: 20px;
+    padding: 80px 20px 20px 20px;
+    justify-items:center;
+    align-items: center; 
+}
+
+#project a .work-item {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border-radius: 30px;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#project a .work-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    display: block;
+}
+
+.work-item-link {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+}
+
+.work-item-link:nth-child(odd) {
+    justify-self: start;
+}
+
+.work-item-link:nth-child(even) {
+    justify-self: end;
+}
+
+#project a .work-info {
+    position: relative; 
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    padding: 20px;
+    text-align: center; 
+    margin-top: -200px; 
+    z-index: 1; 
+}
+
+#project a .work-item h2 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+#project a .work-item p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+#project a .work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.card {
+    position: relative;
+    background: #fff;
+    max-width: 280px;
+    width: 300px;
+    height: 400px;
+    margin: 25px;
+    box-shadow: 0 5px 25px rgb(1 1 1/ 20%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-image {
+    max-height: 250px; 
+    transform: translate(10%, 20%); 
+    margin-bottom: 15px;
+    
+}
+
+.card-image img {
+    max-width: 80%;
+    height: auto;
+    justify-content: center;
+}
+
+.card-info {
+    position: static;
+    color: #222;
+    padding: 20px 20px 20px;
+    z-index: 100;
+}
+
+.card-info h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #030303ab;
+    margin-bottom: 10px;
+}
+
+.card-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+#pagination {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    user-select: none;
+}
+
+#pagination li {
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1/ 10%);
+}
+
+#pagination li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 45px;
+}
+
+.previous-page, .next-page {
+    background: #e6258c;
+    width: 80px;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.previous-page:hover {
+    transform: translateX(-5px);
+
+}
+
+.next-page:hover {
+    transform: translateX(5px);
+
+}
+
+.current-page, .dots-page {
+    background: #fff;
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    background: #e6258c;
+}
+
+.disable {
+    background: #fff;
+}
+
+#posts {
+    padding: 50px;
+}
+
+#sort-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+#sort-controls label {
+    margin-right: 10px;
+}
+
+.post-card {
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.post-card img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.post-card h2 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto; /* Menyelaraskan footer ke bagian bawah halaman */
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Menjaga semua item berada di tengah */
+    flex-wrap: wrap; /* Memungkinkan item untuk membungkus ke baris baru jika tidak cukup ruang */
+}
+
+.footer-content ul li {
+    margin: 0 20px; 
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content ul li i {
+    margin-right: 10px; 
+    color: #21de67; 
+}
+
+.footer-content ul li a {
+    color: #21de67;
+    text-decoration: none;
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/*#portfolio .portfolio-item {
+    margin-bottom: 2rem;
+}
+
+#portfolio img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+form label {
+    display: block;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+form button {
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+*/
+
